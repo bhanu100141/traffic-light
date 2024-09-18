@@ -1,0 +1,172 @@
+/* General styling */
+.Heading{
+    text-align: center;
+    font-style:oblique;
+    margin-top: 0px;
+    padding: 10px;
+}
+.app-container {
+    background-image: url('https://res.cloudinary.com/dgkru5vsg/image/upload/v1726636895/traffic_qkc2ws.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-size: cover;
+  }
+  
+  .traffic-light-container {
+    background-color: rgb(196, 194, 194);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    width: 20vw;
+    
+  }  
+  /* Traffic light styling */
+  .lights-background{
+    background-color: rgb(0, 0, 0);
+    padding: 15px 60px;
+    border-radius: 30px;
+    margin-bottom: 18px;
+   
+  }
+  .light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 20px 0px;
+    opacity: 0.2;
+    transition: opacity 0.5s, filter 0.5s;
+  }
+  
+  .light.active {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+  
+  /* Add dimming effect for inactive lights */
+  .light:not(.active) {
+    opacity: 0.5;
+    filter: brightness(0.5);
+  }
+  
+  /* Blinking effect for pedestrian button */
+  .pedestrian-button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    border-width: 0px;
+    background-color: darkgreen;
+    transition: background-color 0.5s ease;
+  }
+  
+  .pedestrian-button.blinking {
+    animation: blink 1s infinite;
+  }
+  
+  /* Blinking keyframe animation */
+  @keyframes blink {
+    0% {
+      background-color: #ff4d4d;
+    }
+    50% {
+      background-color: #ff9999;
+    }
+    100% {
+      background-color: #ff4d4d;
+    }
+  }
+  
+  /* Countdown timer styling */
+  .countdown {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .pedestrian-button:hover {
+    background-color: #ff6666;
+    transition: background-color 0.3s ease;
+  }
+  .emergency-button{
+    border-radius: 5px;
+    border: 1px solid red;
+    padding: 5px;
+    color: red;
+    background-color: black;
+    margin: 5px;
+    font-weight: bold;
+  }
+  .Alert{
+    background-color: yellow;
+    font-weight: bold;
+  }
+  @media only screen and (max-width: 600px) {
+    .Heading{
+        font-size: 15px;
+    }
+    .traffic-light-container {
+        width: 45vw;
+    }
+    .light {
+        width: 50px;
+        height: 50px;
+      }
+      .pedestrian-button {
+        padding: 5px;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      .countdown {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+  }
+  @media only screen and (min-width: 600px) and (max-width: 900px) {
+    .Heading{
+        font-size: 25px;
+    }
+    .traffic-light-container {
+        width: 35vw;
+    }
+    .light {
+        width: 70px;
+        height: 70px;
+      }
+      .pedestrian-button {
+        padding: 10px;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      .countdown {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+  }
+  @media only screen and (min-width: 900px) {
+    .Heading{
+        font-size: 30px;
+    }
+    .traffic-light-container {
+        width: 30vw;
+    }
+    .light {
+        width: 80px;
+        height: 80px;
+      }
+      .pedestrian-button {
+        padding: 15px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .countdown {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+  }
